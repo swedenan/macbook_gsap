@@ -87,6 +87,26 @@ body {
     @apply font-medium text-xs;
 }
 
+@utility container{
+    width: 100%;
+    @media (width >= 40rem /* 640px */) {
+        max-width: 40rem /* 640px */;
+    }
+    @media (width >= 48rem /* 768px */) {
+        max-width: 48rem /* 768px */;
+    }
+    @media (width >= 64rem /* 1024px */) {
+        max-width: 64rem /* 1024px */;
+    }
+    @media (width >= 80rem /* 1280px */) {
+        max-width: 80rem /* 1280px */;
+    }
+    @media (width >= 96rem /* 1536px */) {
+        max-width: 80rem /* 1536px */;
+    }
+}
+
+
 @layer components {
     header {
         @apply w-screen fixed top-0 left-0 z-50 flex-center bg-black min-h-[7vh];
@@ -113,7 +133,7 @@ body {
     }
 
     #hero {
-        @apply h-fit lg:h-[80vh] col-center mt-40 lg:mt-20 2xl:mt-[7vh];
+        @apply h-full lg:h-[80vh] col-center mt-40 lg:mt-20 2xl:mt-[7vh];
 
         div {
             @apply relative z-10 col-center lg:translate-y-16;
